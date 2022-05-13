@@ -1,5 +1,4 @@
-function renderDOM(){
-  fetch("./books.json")
+fetch("./books.json")
   .then(function (response) {
     return response.json();
   })
@@ -53,10 +52,4 @@ function appendData(data) {
     document.body.append(fragment);
   }
 }
-}
-
-const scripts = document.createElement("script"),
-  text = document.createTextNode("renderDOM()");
-scripts.appendChild(text);
-document.body.appendChild(scripts);
 
